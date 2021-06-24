@@ -1,6 +1,6 @@
 # Development
 
-## URLe dostpnę dzięki `yarn start`
+## URLe dostpne dzięki `yarn start`
 
 - http://localhost:3000 - bieżący porojekt, czyli panel administracyjny (`webpack-dev-server`)
 - http://localhost:3131 - strona pizzerii dla klientów
