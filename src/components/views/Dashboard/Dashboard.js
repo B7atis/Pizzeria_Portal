@@ -1,9 +1,9 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import styles from './Homepage';
+import styles from './Dashboard.module.scss';
 import { Link } from 'react-router-dom';
 
-const Homepage = () => (
+const Dashboard = () => (
   <div className={styles.component}>
     <header className="App-header">
       <p>
@@ -21,4 +21,4 @@ const Homepage = () => (
   </div>
 );
 
-export default Homepage;
+export default Dashboard;
