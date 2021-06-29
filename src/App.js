@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MainLayout from '../src/components/layout/MainLayout/MainLayout';
-import Dashboard from './components/views/Dashboard/Dashboard';
+import Homepage from './components/views/Homepage/Homepage';
 import Login from '../src/components/views/Login/Login';
 import Tables from '../src/components/views/Tables/Tables';
 import Waiter from '../src/components/views/Waiter/Waiter';
@@ -27,7 +27,7 @@ function App() {
               <Route
                 exact
                 path={process.env.PUBLIC_URL + '/'}
-                component={Dashboard}
+                component={Homepage}
               />
               <Route
                 exact
