@@ -1,11 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MainLayout from '../src/components/layout/MainLayout/MainLayout';
-import Homepage from './components/views/Homepage/Homepage';
 import Login from '../src/components/views/Login/Login';
+import Kitchen from '../src/components/views/Kitchen/Kitchen';
 import Tables from '../src/components/views/Tables/Tables';
 import Waiter from '../src/components/views/Waiter/Waiter';
-import Kitchen from '../src/components/views/Kitchen/Kitchen';
+import BookingInfo from '../src/components/views/BookingInfo/BookingInfo';
+import NewBooking from '../src/components/views/NewBooking/NewBooking';
+import NewEvent from '../src/components/views/NewEvent/NewEvent';
+import EventsInfo from '../src/components/views/EventsInfo/EventsInfo';
+import NewOrder from '../src/components/views/NewOrder/NewOrder';
+import OrderInfo from '../src/components/views/OrderInfo/OrderInfo';
+import Homepage from './components/views/Homepage/Homepage';
 import { StylesProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
@@ -13,7 +19,7 @@ import { ThemeProvider } from '@material-ui/styles';
 const theme = createMuiTheme({
   palette: {
     primary: { main: '#2B4C6F' },
-    // secondary: { main: '#11cb5f'},
+    secondary: { main: '#11cb5f'},
   },
 });
 
@@ -41,8 +47,38 @@ function App() {
               />
               <Route
                 exact
+                path={process.env.PUBLIC_URL + '/tables/booking/new'}
+                component={NewBooking}
+              />
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + '/tables/booking/:id'}
+                component={BookingInfo}
+              />
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + '/tables/events/new'}
+                component={NewEvent}
+              />
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + '/tables/events/:id'}
+                component={EventsInfo}
+              />
+              <Route
+                exact
                 path={process.env.PUBLIC_URL + '/waiter'}
                 component={Waiter}
+              />
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + '/waiter/order/new'}
+                component={NewOrder}
+              />
+              <Route
+                exact
+                path={process.env.PUBLIC_URL + '/waiter/order/:id'}
+                component={OrderInfo}
               />
               <Route
                 exact
